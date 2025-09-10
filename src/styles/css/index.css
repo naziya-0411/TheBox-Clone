@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "work-sans", sans-serif;
+}
+
+nav {
+  background-color: rgba(0, 26, 255, 0.0901960784);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+nav ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.6rem;
+}
+
+.header-image-container {
+  height: 12rem;
+  background-image: url("../../assets/images/building.jpg");
+  background-repeat: none;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-family: "work-sans", sans-serif;
+}
+.header-image-container h2 {
+  width: 35%;
+}
+
+.feature-container {
+  width: 40%;
+  color: white;
+  background-color: #2947A9;
+  font-size: 0.6rem;
+  text-align: center;
+  position: absolute;
+  top: 11.4rem;
+  left: 10rem;
+}
+.feature-container .feature-btn {
+  display: flex;
+  justify-content: space-around;
+  background-color: #292E3D;
+}
+
+.reputation-container h3 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 5% 0 0 5%;
+}
+.reputation-container .reputation-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reputation-container .reputation-content .reputation-box {
+  width: 33%;
+  border: 1px solid rgba(128, 128, 128, 0.554);
+  font-size: 0.5rem;
+  border-radius: 2px;
+  padding: 2%;
+  color: gray;
+  margin: 0.5rem;
+}
+.reputation-container .reputation-content .reputation-box h4 {
+  color: rgba(0, 0, 0, 0.781);
+  padding-bottom: 5%;
+}
+
+/*# sourceMappingURL=index.css.map */

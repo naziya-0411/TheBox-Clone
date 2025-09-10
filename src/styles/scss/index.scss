@@ -1,0 +1,94 @@
+@use './variables/variable.scss' as variable;
+@use './mixins/mixin.scss' as mixin;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: variable.$primary-font-family;
+}
+
+nav {
+    background-color: #001aff17;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        display: flex;
+
+        li {
+            list-style: none;
+            padding: 0.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: variable.$phone-primary-font;
+        }
+    }
+}
+
+.header-image-container {
+    height: 12rem;
+    background-image: url('../../assets/images/building.jpg');
+    background-repeat: none;
+    background-size: cover;
+    // background-position: 0px -80px;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    font-family: variable.$primary-font-family;
+
+    h2 {
+        width: 35%;
+    }
+}
+
+.feature-container {
+    width: 40%;
+    color: white;
+    background-color: variable.$primary-color;
+    font-size: variable.$phone-primary-font;
+
+    text-align: center;
+    position: absolute;
+    top: 11.4rem;
+    left: 10rem;
+
+    .feature-btn {
+        display: flex;
+        justify-content: space-around;
+        background-color: variable.$secondary-color;
+    }
+}
+
+
+.reputation-container {
+    h3{
+        text-align: center;
+        font-size: variable.$phone-secondary-font;
+        padding: 5% 0 0 5%;
+    }
+    .reputation-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .reputation-box {
+            width: 33%;
+            border: 1px solid rgba(128, 128, 128, 0.554);
+            font-size: 0.5rem;
+            border-radius: 2px;
+            padding:2%;
+            color: gray;
+            margin: 0.5rem;
+            h4{
+                color: rgba(0, 0, 0, 0.781);
+                padding-bottom: 5%;
+            }
+        }
+    }
+}
