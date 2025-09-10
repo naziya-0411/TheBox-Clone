@@ -92,3 +92,25 @@ nav {
         }
     }
 }
+
+.man-img-container{
+    padding-bottom: 3rem;
+    height: 15rem;
+    width: 14rem;
+    background-image: url('../../assets/images/man.jpg');
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+
+    .about-us-card{
+        background-color: variable.$primary-color;
+        color: white;
+        font-size: variable.$phone-primary-font;
+        height: 10rem;
+        width: 12rem;
+        position: absolute;
+        top: 20rem;
+        left: 
+        
+    }
+}
