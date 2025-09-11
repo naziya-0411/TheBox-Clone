@@ -7,6 +7,11 @@
   font-family: "work-sans", sans-serif;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
 nav {
   background-color: rgba(0, 26, 255, 0.0901960784);
   display: flex;
@@ -28,6 +33,9 @@ nav .brand-logo #heading {
   font-weight: 700;
 }
 nav .brand-logo img {
+  height: 1.4rem;
+}
+nav img {
   height: 1.5rem;
 }
 nav ul {
@@ -36,14 +44,15 @@ nav ul {
 nav ul li {
   list-style: none;
   padding: 0.5rem;
+  font-size: 2rem;
+}
+nav ul #contact-us {
+  color: orange;
 }
 nav ul a {
   text-decoration: none;
   color: black;
   font-size: 0.6rem;
-}
-nav img {
-  height: 1.5rem;
 }
 nav img:focus + ul {
   display: inline;
@@ -60,39 +69,74 @@ nav img:focus + ul li {
 }
 
 .header-image-container {
-  height: 12rem;
+  height: 50%;
   background-image: url("../../assets/images/building.jpg");
   background-repeat: none;
   background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-left: 2rem;
   font-family: "work-sans", sans-serif;
 }
 .header-image-container h2 {
-  width: 35%;
+  width: 30%;
+  color: rgb(40, 38, 38);
+}
+.header-image-container .feature-box-lg {
+  display: none;
+  color: white;
+  background-color: #2947A9;
+  font-size: 0.6rem;
+  text-align: center;
+  align-self: flex-end;
+  margin-right: 2rem;
+  font-size: 0.8rem;
+}
+.header-image-container .feature-box-lg .feature-content {
+  padding: 0.5rem;
+}
+.header-image-container .feature-box-lg .feature-content h4 {
+  margin-bottom: 0.5rem;
+}
+.header-image-container .feature-box-lg .feature-content p {
+  font-weight: 100;
+}
+.header-image-container .feature-box-lg .feature-btn {
+  display: flex;
+  justify-content: space-around;
+  background-color: #292E3D;
+  height: 1.2rem;
 }
 
-.feature-container {
+.feature-box-sm {
   width: 100%;
   color: white;
   background-color: #2947A9;
   font-size: 0.6rem;
-  align-self: flex-end;
-  justify-self: end;
+  font-size: 1rem;
   text-align: center;
-  top: 11.4rem;
-  left: 10rem;
 }
-.feature-container .feature-btn {
+.feature-box-sm .feature-content {
+  padding: 0.5rem;
+}
+.feature-box-sm .feature-content h4 {
+  margin-bottom: 0.5rem;
+}
+.feature-box-sm .feature-content p {
+  font-weight: 100;
+}
+.feature-box-sm .feature-btn {
   display: flex;
+  height: 1.2rem;
   justify-content: space-around;
   background-color: #292E3D;
 }
 
 .reputation-container h3 {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 5% 0 0 5%;
 }
 .reputation-container .reputation-content {
@@ -103,7 +147,7 @@ nav img:focus + ul li {
   gap: 5%;
 }
 .reputation-container .reputation-content .reputation-box {
-  width: 50%;
+  width: 15rem;
   border: 1px solid rgba(128, 128, 128, 0.554);
   font-size: 0.5rem;
   border-radius: 2px;
@@ -112,45 +156,48 @@ nav img:focus + ul li {
   margin: 0.5rem;
 }
 .reputation-container .reputation-content .reputation-box img {
-  height: 1.8rem;
+  height: 10%;
   padding-bottom: 5%;
 }
 .reputation-container .reputation-content .reputation-box h4 {
   color: rgba(0, 0, 0, 0.777);
   padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+.reputation-container .reputation-content .reputation-box p {
+  font-size: 0.8rem;
 }
 
 .man-img-container {
   position: relative;
-  height: 15rem;
+  height: 20rem;
 }
 .man-img-container .man-img {
+  display: none;
   position: absolute;
   top: 2rem;
   left: 1rem;
   padding-bottom: 3rem;
   height: 10rem;
   width: 14rem;
-  background-image: url("../../assets/images/man.jpg");
   background-repeat: none;
   background-size: cover;
   background-position: center center;
 }
 .man-img-container .about-us-card {
-  height: 8rem;
-  width: 9rem;
+  width: 17rem;
   position: absolute;
   top: 3rem;
-  left: 10rem;
+  left: 2rem;
   background-color: #2947A9;
   color: white;
-  font-size: 7px;
+  font-size: 10px;
   padding: 0.7rem;
   font-weight: 100;
 }
 .man-img-container .about-us-card button {
   background-color: white;
-  font-size: 6px;
+  font-size: 6x;
   color: #2947A9;
   border: none;
   border-radius: 1px;
@@ -192,35 +239,120 @@ nav img:focus + ul li {
   border-bottom: 1px solid white;
 }
 
+.company-detail-container {
+  height: 80vh;
+}
 .company-detail-container .accomplishment-container {
+  height: 80%;
   position: relative;
 }
 .company-detail-container .accomplishment-container .accomplishment-box {
   position: absolute;
   padding: 1rem;
   width: 60%;
+  height: 6rem;
   box-shadow: 2px 2px 6px grey;
   border-radius: 4px;
   background-color: white;
 }
 .company-detail-container .accomplishment-container .accomplishment-box img {
-  height: 2.5rem;
+  position: absolute;
+  height: 3.5rem;
 }
 .company-detail-container .accomplishment-container .client {
   left: 30%;
   z-index: 20;
 }
+.company-detail-container .accomplishment-container .client img {
+  bottom: 75%;
+  left: 80%;
+}
 .company-detail-container .accomplishment-container .project {
   top: 5rem;
   z-index: 15;
+}
+.company-detail-container .accomplishment-container .project img {
+  bottom: 80%;
 }
 .company-detail-container .accomplishment-container .awards {
   left: 30%;
   top: 10rem;
   z-index: 12;
 }
+.company-detail-container .accomplishment-container .awards img {
+  bottom: 75%;
+  left: 80%;
+}
 .company-detail-container .accomplishment-container .years {
   top: 15rem;
+}
+.company-detail-container .accomplishment-container .years img {
+  bottom: 80%;
+}
+
+.experience-container h2 {
+  color: #2947A9;
+}
+.experience-container p {
+  font-size: 0.6rem;
+  color: rgb(75, 71, 71);
+  font-weight: 100;
+}
+.experience-container button {
+  background-color: #2947A9;
+  padding: 0.8rem;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+.consultation-container {
+  height: 10rem;
+  background-image: url("/src/assets/images/consultation.png");
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.consultation-container .consultation-content-right button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 540px) {
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    font-size: 1.5rem;
+  }
+  nav #nav-menu {
+    display: none;
+  }
+  nav .brand-logo {
+    font-size: 1.5rem;
+  }
+  .header-image-container h2 {
+    font-size: 2.5rem;
+  }
+  .header-image-container .feature-box-lg {
+    display: inline-block;
+  }
+  .feature-box-sm {
+    display: none;
+  }
+  .reputation-container h3 {
+    margin-bottom: 2rem;
+  }
+  .reputation-container .reputation-content {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .reputation-container .reputation-content .reputation-box {
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
