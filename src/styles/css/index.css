@@ -1,17 +1,226 @@
-/* Error: Expected expression.
- *     ,
- * 113 |         left: 
- *     |               ^
- *     '
- *   src/styles/scss/index.scss 113:15  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a     \2577 \a 113 \2502          left: \a     \2502                ^\a     \2575 \a   src/styles/scss/index.scss 113:15  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: "work-sans", sans-serif;
 }
+
+nav {
+  background-color: rgba(0, 26, 255, 0.0901960784);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .brand-logo {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+}
+nav .brand-logo #italics-heading {
+  color: #2947A9;
+  font-weight: 700;
+  font-style: italic;
+}
+nav .brand-logo #heading {
+  color: #2947A9;
+  font-weight: 700;
+}
+nav .brand-logo img {
+  height: 1.5rem;
+}
+nav ul {
+  display: none;
+}
+nav ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+nav ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.6rem;
+}
+nav img {
+  height: 1.5rem;
+}
+nav img:focus + ul {
+  display: inline;
+  position: absolute;
+  background-color: rgba(0, 26, 255, 0.0901960784);
+  width: 30%;
+  left: 70%;
+  top: 5%;
+}
+nav img:focus + ul li {
+  border-bottom: 1px solid gray;
+  padding: 3px;
+  text-align: center;
+}
+
+.header-image-container {
+  height: 12rem;
+  background-image: url("../../assets/images/building.jpg");
+  background-repeat: none;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  font-family: "work-sans", sans-serif;
+}
+.header-image-container h2 {
+  width: 35%;
+}
+
+.feature-container {
+  width: 100%;
+  color: white;
+  background-color: #2947A9;
+  font-size: 0.6rem;
+  align-self: flex-end;
+  justify-self: end;
+  text-align: center;
+  top: 11.4rem;
+  left: 10rem;
+}
+.feature-container .feature-btn {
+  display: flex;
+  justify-content: space-around;
+  background-color: #292E3D;
+}
+
+.reputation-container h3 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 5% 0 0 5%;
+}
+.reputation-container .reputation-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+}
+.reputation-container .reputation-content .reputation-box {
+  width: 50%;
+  border: 1px solid rgba(128, 128, 128, 0.554);
+  font-size: 0.5rem;
+  border-radius: 2px;
+  padding: 2%;
+  color: gray;
+  margin: 0.5rem;
+}
+.reputation-container .reputation-content .reputation-box img {
+  height: 1.8rem;
+  padding-bottom: 5%;
+}
+.reputation-container .reputation-content .reputation-box h4 {
+  color: rgba(0, 0, 0, 0.777);
+  padding-bottom: 0.5rem;
+}
+
+.man-img-container {
+  position: relative;
+  height: 15rem;
+}
+.man-img-container .man-img {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  padding-bottom: 3rem;
+  height: 10rem;
+  width: 14rem;
+  background-image: url("../../assets/images/man.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+}
+.man-img-container .about-us-card {
+  height: 8rem;
+  width: 9rem;
+  position: absolute;
+  top: 3rem;
+  left: 10rem;
+  background-color: #2947A9;
+  color: white;
+  font-size: 7px;
+  padding: 0.7rem;
+  font-weight: 100;
+}
+.man-img-container .about-us-card button {
+  background-color: white;
+  font-size: 6px;
+  color: #2947A9;
+  border: none;
+  border-radius: 1px;
+  margin-top: 1.2rem;
+  padding: 0.2rem;
+  font-weight: 800;
+}
+
+.services {
+  background-color: #F6F8F7;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.services .service-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  margin: 1rem;
+}
+.services .service-box h3 {
+  font-size: 9px;
+  padding-top: 1rem;
+}
+.services .service-box img {
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid grey;
+}
+.services .service-box-blue {
+  background-color: #2947A9;
+  color: white;
+}
+.services .service-box-blue img {
+  border-bottom: 1px solid white;
+}
+
+.company-detail-container .accomplishment-container {
+  position: relative;
+}
+.company-detail-container .accomplishment-container .accomplishment-box {
+  position: absolute;
+  padding: 1rem;
+  width: 60%;
+  box-shadow: 2px 2px 6px grey;
+  border-radius: 4px;
+  background-color: white;
+}
+.company-detail-container .accomplishment-container .accomplishment-box img {
+  height: 2.5rem;
+}
+.company-detail-container .accomplishment-container .client {
+  left: 30%;
+  z-index: 20;
+}
+.company-detail-container .accomplishment-container .project {
+  top: 5rem;
+  z-index: 15;
+}
+.company-detail-container .accomplishment-container .awards {
+  left: 30%;
+  top: 10rem;
+  z-index: 12;
+}
+.company-detail-container .accomplishment-container .years {
+  top: 15rem;
+}
+
+/*# sourceMappingURL=index.css.map */
