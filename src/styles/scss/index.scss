@@ -416,6 +416,7 @@ nav {
         justify-items: center;
         grid-template-columns: 1fr;
         gap: 1rem;
+
         .project-box{
             // margin: 2rem;
             img{
@@ -433,8 +434,8 @@ nav {
                 }
             }
         }
-
     }
+
     .prev-next-container{
         display: flex;
         justify-content: space-evenly;
@@ -584,7 +585,6 @@ footer {
     }
     .company-detail-container{
         .accomplishment-container{
-            
             .accomplishment-box{
                 height: 7rem;
                 p{
@@ -657,6 +657,10 @@ footer {
         }
     }
 
-    // .project
-
+    .project-container{
+        flex-direction: row;
+        .project-container-right{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }

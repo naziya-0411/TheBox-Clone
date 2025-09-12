@@ -538,6 +538,12 @@ footer .footer-bottom {
   .company-detail-container .experience-container {
     width: 20rem;
   }
+  .project-container {
+    flex-direction: row;
+  }
+  .project-container .project-container-right {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
