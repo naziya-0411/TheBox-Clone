@@ -69,7 +69,7 @@ nav img:focus + ul li {
 }
 
 .header-image-container {
-  height: 50%;
+  height: 30%;
   background-image: url("../../assets/images/building.jpg");
   background-repeat: none;
   background-size: cover;
@@ -149,7 +149,6 @@ nav img:focus + ul li {
 .reputation-container .reputation-content .reputation-box {
   width: 15rem;
   border: 1px solid rgba(128, 128, 128, 0.554);
-  font-size: 0.5rem;
   border-radius: 2px;
   padding: 2%;
   color: gray;
@@ -162,37 +161,21 @@ nav img:focus + ul li {
 .reputation-container .reputation-content .reputation-box h4 {
   color: rgba(0, 0, 0, 0.777);
   padding-bottom: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 20px;
 }
 .reputation-container .reputation-content .reputation-box p {
-  font-size: 0.8rem;
+  font-size: 15px;
 }
 
 .man-img-container {
-  position: relative;
-  height: 20rem;
-}
-.man-img-container .man-img {
-  display: none;
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  padding-bottom: 3rem;
-  height: 10rem;
-  width: 14rem;
-  background-repeat: none;
-  background-size: cover;
-  background-position: center center;
+  padding: 3rem;
 }
 .man-img-container .about-us-card {
-  width: 17rem;
-  position: absolute;
-  top: 3rem;
-  left: 2rem;
+  margin: 2rem;
   background-color: #2947A9;
   color: white;
-  font-size: 10px;
-  padding: 0.7rem;
+  font-size: 15px;
+  padding: 1rem;
   font-weight: 100;
 }
 .man-img-container .about-us-card button {
@@ -208,9 +191,11 @@ nav img:focus + ul li {
 
 .services {
   background-color: #F6F8F7;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 .services .service-box {
   display: flex;
@@ -218,12 +203,12 @@ nav img:focus + ul li {
   align-items: center;
   flex-direction: column;
   background-color: white;
-  height: 6rem;
-  width: 6rem;
-  margin: 1rem;
+  height: 10rem;
+  justify-content: center;
+  width: 80%;
 }
 .services .service-box h3 {
-  font-size: 9px;
+  font-size: 20px;
   padding-top: 1rem;
 }
 .services .service-box img {
@@ -240,15 +225,16 @@ nav img:focus + ul li {
 }
 
 .company-detail-container {
-  height: 80vh;
+  height: 45rem;
+  padding: 2rem;
 }
 .company-detail-container .accomplishment-container {
-  height: 80%;
+  height: 25rem;
   position: relative;
 }
 .company-detail-container .accomplishment-container .accomplishment-box {
   position: absolute;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   width: 60%;
   height: 6rem;
   box-shadow: 2px 2px 6px grey;
@@ -257,7 +243,17 @@ nav img:focus + ul li {
 }
 .company-detail-container .accomplishment-container .accomplishment-box img {
   position: absolute;
-  height: 3.5rem;
+  height: 48px;
+}
+.company-detail-container .accomplishment-container .accomplishment-box h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.company-detail-container .accomplishment-container .accomplishment-box p {
+  color: rgb(88, 83, 83);
+  padding: 6px;
+  font-size: 12px;
+  border-left: 4px solid orange;
 }
 .company-detail-container .accomplishment-container .client {
   left: 30%;
@@ -273,6 +269,7 @@ nav img:focus + ul li {
 }
 .company-detail-container .accomplishment-container .project img {
   bottom: 80%;
+  left: 5%;
 }
 .company-detail-container .accomplishment-container .awards {
   left: 30%;
@@ -287,28 +284,33 @@ nav img:focus + ul li {
   top: 15rem;
 }
 .company-detail-container .accomplishment-container .years img {
-  bottom: 80%;
+  bottom: -10%;
+  left: 82%;
 }
-
-.experience-container h2 {
+.company-detail-container .experience-container h2 {
   color: #2947A9;
+  font-size: 30px;
 }
-.experience-container p {
-  font-size: 0.6rem;
+.company-detail-container .experience-container p {
+  padding: 1.5rem 0 0.5rem 0;
+  font-size: 16px;
   color: rgb(75, 71, 71);
   font-weight: 100;
 }
-.experience-container button {
+.company-detail-container .experience-container button {
   background-color: #2947A9;
   padding: 0.8rem;
   color: white;
   border: none;
   border-radius: 2px;
+  margin: 2rem 0 0 0;
+  width: 50%;
 }
 
 .consultation-container {
   height: 10rem;
   background-image: url("/src/assets/images/consultation.png");
+  backdrop-filter: brightness(0.6);
   color: white;
   display: flex;
   justify-content: space-evenly;
@@ -319,6 +321,125 @@ nav img:focus + ul li {
   border: 2px solid white;
   color: white;
   padding: 0.5rem;
+}
+
+.project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.project-container .project-container-left {
+  color: #C2C7D6;
+  font-size: 20px;
+}
+.project-container .project-container-left ul {
+  padding: 2rem;
+  list-style: none;
+}
+.project-container .project-container-left ul li {
+  padding-left: 0.5rem;
+}
+.project-container .project-container-left .active {
+  color: #2947A9;
+  border-left: 3px solid #2947A9;
+}
+.project-container .project-container-right {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.project-container .project-container-right .project-box img {
+  width: 80%;
+}
+.project-container .project-container-right .project-box .project-content {
+  width: 80%;
+  background-color: #2947A9;
+  color: white;
+  padding: 0.8rem;
+}
+.project-container .project-container-right .project-box .project-content h2 {
+  font-weight: 600;
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+.project-container .prev-next-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.project-container .prev-next-container .prev-btn {
+  background-color: #292E3D;
+}
+.project-container .prev-next-container ul {
+  display: flex;
+  justify-content: center;
+}
+.project-container .prev-next-container .next-btn {
+  background-attachment: #292E3D;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  background-color: #F6F8F7;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  width: 95%;
+}
+.form-row input {
+  width: 50%;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.form-submit [name=message] {
+  width: 90%;
+  height: 135px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding: 5px;
+}
+.form-submit [name=message] button {
+  width: 200px;
+  height: 50px;
+  padding: 16px 20px 16px 20px;
+  background-color: #2947A9;
+  color: white;
+  border-radius: 2px2;
+  border: none;
+}
+
+footer .footer-container {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footer-container .footer-right form {
+  display: flex;
+  gap: 5px;
+}
+footer .footer-container .footer-right form form button {
+  padding: 3px 5px 3px 5px;
+  background-color: #F9995d;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  height: 40px;
+}
+footer .footer-container .footer-right form form input {
+  padding: 3px 5px 3px 5px;
+}
+footer .footer-bottom {
+  background-color: #2947A9;
 }
 
 @media screen and (min-width: 540px) {
@@ -340,11 +461,15 @@ nav img:focus + ul li {
   .header-image-container .feature-box-lg {
     display: inline-block;
   }
+  .header-image-container .feature-box-lg p {
+    padding: 1rem;
+  }
   .feature-box-sm {
     display: none;
   }
   .reputation-container h3 {
     margin-bottom: 2rem;
+    font-size: 20px;
   }
   .reputation-container .reputation-content {
     flex-direction: row;
@@ -352,6 +477,66 @@ nav img:focus + ul li {
   }
   .reputation-container .reputation-content .reputation-box {
     width: 25%;
+  }
+  .company-detail-container .accomplishment-container .accomplishment-box {
+    height: 7rem;
+  }
+  .company-detail-container .accomplishment-container .accomplishment-box p {
+    font-size: 18px;
+  }
+  .company-detail-container .accomplishment-container .accomplishment-box h2 {
+    font-size: 40px;
+  }
+  .services {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .man-img-outer-container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 80%;
+    height: 30rem;
+  }
+  .man-img-outer-container .man-img-container {
+    height: 30rem;
+    position: relative;
+  }
+  .man-img-outer-container .man-img-container .man-img {
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+    padding-bottom: 3rem;
+    height: 24rem;
+    width: 28rem;
+    background-image: url("../../assets/images/man.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+  }
+  .man-img-outer-container .man-img-container .about-us-card {
+    position: absolute;
+    height: 20rem;
+    width: 20rem;
+    top: 5rem;
+    left: 20rem;
+  }
+  .man-img-outer-container .man-img-container .about-us-card p {
+    margin: 1rem;
+    margin-left: 0px;
+  }
+  .company-detail-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    height: 30rem;
+  }
+  .company-detail-container .accomplishment-container {
+    width: 80%;
+  }
+  .company-detail-container .experience-container {
+    width: 20rem;
   }
 }
 

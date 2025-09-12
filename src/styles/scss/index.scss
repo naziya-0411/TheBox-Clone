@@ -83,7 +83,7 @@ nav {
 }
 
 .header-image-container {
-    height: 50%;
+    height: 30%;
     background-image: url('../../assets/images/building.jpg');
     background-repeat: none;
     background-size: cover;
@@ -175,7 +175,6 @@ nav {
         .reputation-box {
             width: 15rem;
             border: 1px solid rgba(128, 128, 128, 0.554);
-            font-size: 0.5rem;
             border-radius: 2px;
             padding: 2%;
             color: gray;
@@ -189,11 +188,11 @@ nav {
             h4 {
                 color: rgba(0, 0, 0, 0.777);
                 padding-bottom: 0.5rem;
-                font-size: 0.8rem;
+                font-size: 20px;
             }
 
             p {
-                font-size: 0.8rem;
+                font-size: 15px;
             }
         }
     }
@@ -201,34 +200,16 @@ nav {
 
 
 .man-img-container {
-    position: relative;
-    height: 20rem;
-
-    .man-img {
-        display: none;
-        position: absolute;
-        top: 2rem;
-        left: 1rem;
-        padding-bottom: 3rem;
-        height: 10rem;
-        width: 14rem;
-        // background-image: url('../../assets/images/man.jpg');
-        background-repeat: none;
-        background-size: cover;
-        background-position: center center;
-    }
+    padding: 3rem;
 
     .about-us-card {
-        // height: ;
-        width: 17rem;
-        position: absolute;
-        top: 3rem;
-        left: 2rem;
+        margin: 2rem;
         background-color: variable.$primary-color;
         color: white;
-        font-size: 10px;
-        padding: 0.7rem;
+        font-size: 15px;
+        padding: 1rem;
         font-weight: 100;
+
 
         button {
             background-color: white;
@@ -245,9 +226,11 @@ nav {
 
 .services {
     background-color: #F6F8F7;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
 
     .service-box {
         display: flex;
@@ -255,12 +238,12 @@ nav {
         align-items: center;
         flex-direction: column;
         background-color: white;
-        height: 6rem;
-        width: 6rem;
-        margin: 1rem;
+        height: 10rem;
+        justify-content: center;
+        width: 80%;
 
         h3 {
-            font-size: 9px;
+            font-size: 20px;
             padding-top: 1rem;
         }
 
@@ -282,15 +265,19 @@ nav {
 }
 
 .company-detail-container {
-    height: 80vh;
+    height: 45rem;
+    padding: 2rem;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
 
     .accomplishment-container {
-        height: 80%;
+        height: 25rem;
         position: relative;
 
         .accomplishment-box {
             position: absolute;
-            padding: 1rem;
+            padding: 1.5rem 1rem 1rem 1rem;
             width: 60%;
             height: 6rem;
             box-shadow: 2px 2px 6px grey;
@@ -299,7 +286,19 @@ nav {
 
             img {
                 position: absolute;
-                height: 3.5rem;
+                height: 48px;
+            }
+
+            h2 {
+                font-size: 32px;
+                font-weight: 600;
+            }
+
+            p {
+                color: rgb(88, 83, 83);
+                padding: 6px;
+                font-size: 12px;
+                border-left: 4px solid orange;
             }
         }
 
@@ -319,6 +318,7 @@ nav {
 
             img {
                 bottom: 80%;
+                left: 5%;
             }
         }
 
@@ -337,37 +337,41 @@ nav {
             top: 15rem;
 
             img {
-                bottom: 80%;
+                bottom: -10%;
+                left: 82%;
             }
         }
     }
 
-}
+    .experience-container {
+        h2 {
+            color: variable.$primary-color;
+            font-size: 30px;
+        }
 
-.experience-container {
-    h2 {
-        color: variable.$primary-color;
-    }
+        p {
+            padding: 1.5rem 0 0.5rem 0;
+            font-size: 16px;
+            color: rgb(75, 71, 71);
+            font-weight: 100;
+        }
 
-    p {
-        font-size: variable.$phone-primary-font;
-        color: rgb(75, 71, 71);
-        font-weight: 100;
-
-    }
-
-    button {
-        background-color: variable.$primary-color;
-        padding: 0.8rem;
-        color: white;
-        border: none;
-        border-radius: 2px;
+        button {
+            background-color: variable.$primary-color;
+            padding: 0.8rem;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            margin: 2rem 0 0 0;
+            width: 50%;
+        }
     }
 }
 
 .consultation-container {
     height: 10rem;
     background-image: url('/src/assets/images/consultation.png');
+    backdrop-filter: brightness(0.6);
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -385,9 +389,145 @@ nav {
     }
 }
 
-.project{
-    
+.project-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .project-container-left{
+        color: #C2C7D6;
+        font-size: 20px;
+        ul{
+            padding: 2rem;
+            list-style: none;
+            li{
+                padding-left: 0.5rem;
+            }
+        }
+        .active{
+            color: variable.$primary-color;
+            border-left: 3px solid variable.$primary-color;
+        }
+    }
+
+    .project-container-right{
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        .project-box{
+            // margin: 2rem;
+            img{
+                width: 80%;
+            }
+            .project-content{
+                width: 80%;
+                background-color: variable.$primary-color;
+                color: white;
+                padding: 0.8rem;
+                h2{
+                    font-weight: 600;
+                    font-size: 16px;
+                    padding-bottom: 8px;
+                }
+            }
+        }
+
+    }
+    .prev-next-container{
+        display: flex;
+        justify-content: space-evenly;
+        .prev-btn{
+            background-color: #292E3D;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+        }
+        .next-btn{
+            background-attachment: #292E3D;
+        }
+    }
 }
+
+.form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background-color: #F6F8F7;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    width: 95%;
+
+    input {
+        width: 50%;
+        border-radius: 3px;
+        border: 1px solid gray;
+        padding: 5px;
+    }
+}
+
+
+
+
+.form-submit [name="message"] {
+    width: 90%;
+    height: 135px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding: 5px;
+
+    button {
+        width: 200px;
+        height: 50px;
+        padding: 16px 20px 16px 20px;
+        background-color: #2947A9;
+        color: white;
+        border-radius: 2px2;
+        border: none;
+    }
+}
+
+
+footer {
+    .footer-container {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+
+        .footer-right form {
+            display: flex;
+            gap: 5px;
+
+            form button {
+                padding: 3px 5px 3px 5px;
+                background-color: #F9995d;
+                color: white;
+                border-radius: 2px;
+                border: none;
+                height: 40px;
+            }
+
+            form input {
+                padding: 3px 5px 3px 5px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: #2947A9;
+    }
+
+}
+
+
 
 @media screen and (min-width: 540px) {
     nav {
@@ -415,6 +555,10 @@ nav {
 
         .feature-box-lg {
             display: inline-block;
+
+            p {
+                padding: 1rem;
+            }
         }
     }
 
@@ -425,6 +569,7 @@ nav {
     .reputation-container {
         h3 {
             margin-bottom: 2rem;
+            font-size: 20px;
         }
 
         .reputation-content {
@@ -437,4 +582,81 @@ nav {
             }
         }
     }
+    .company-detail-container{
+        .accomplishment-container{
+            
+            .accomplishment-box{
+                height: 7rem;
+                p{
+                    font-size: 18px;
+                }
+                h2{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+
+    .services {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .man-img-outer-container {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        width: 80%;
+        height: 30rem;
+
+        .man-img-container {
+            height: 30rem;
+            position: relative;
+
+            .man-img {
+                position: absolute;
+                top: 5rem;
+                left: 1rem;
+                padding-bottom: 3rem;
+                height: 24rem;
+                width: 28rem;
+                background-image: url('../../assets/images/man.jpg');
+                background-repeat: none;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .about-us-card {
+                position: absolute;
+                height: 20rem;
+                width: 20rem;
+                top: 5rem;
+                left: 20rem;
+
+                p {
+                    margin: 1rem;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+
+    .company-detail-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem;
+        height: 30rem;
+
+        .accomplishment-container {
+            width: 80%;
+        }
+        .experience-container{
+            width:20rem;
+        }
+    }
+
+    // .project
+
 }
