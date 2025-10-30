@@ -21,7 +21,8 @@ nav {
 nav .brand-logo {
   display: flex;
   align-items: center;
-  padding: 0.2rem;
+  padding: 0.3rem;
+  font-size: 1rem;
 }
 nav .brand-logo #italics-heading {
   color: #2947A9;
@@ -44,7 +45,6 @@ nav ul {
 nav ul li {
   list-style: none;
   padding: 0.5rem;
-  font-size: 2rem;
 }
 nav ul #contact-us {
   color: orange;
@@ -52,7 +52,7 @@ nav ul #contact-us {
 nav ul a {
   text-decoration: none;
   color: black;
-  font-size: 0.6rem;
+  font-size: 1.2rem;
 }
 nav img:focus + ul {
   display: inline;
@@ -70,7 +70,7 @@ nav img:focus + ul li {
 
 .header-image-container {
   height: 30%;
-  background-image: url("../../assets/images/building.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 16.58%, rgba(255, 255, 255, 0) 72.38%), url("../../assets/images/building.jpg");
   background-repeat: none;
   background-size: cover;
   background-position: center center;
